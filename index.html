@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>心灵街机 · PSYCHO ARCADE</title>
+  <meta name="description" content="像素街机风趣味心理测试：性格、情商、脑洞三台机台等你投币。" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- CRT 扫描线覆盖层 -->
+  <div class="crt"></div>
+
+  <div class="screen">
+
+    <!-- ═══ 标题画面 ═══ -->
+    <section class="scene" id="sceneTitle">
+      <div class="marquee">★ 心 灵 街 机 ★</div>
+      <p class="sub">PSYCHO&nbsp;ARCADE&nbsp;ver&nbsp;1.0</p>
+      <div class="press">▶ 投 币 开 始 ◀</div>
+      <div class="cab-row">
+        <button class="cabinet" data-game="mbti">
+          <span class="cab-art">🕹</span><b>性格迷宫</b><i>PERSONA MAZE</i><em>8 关</em>
+        </button>
+        <button class="cabinet pink" data-game="eq">
+          <span class="cab-art">💗</span><b>情商战机</b><i>EQ FIGHTER</i><em>8 关</em>
+        </button>
+        <button class="cabinet green" data-game="idea">
+          <span class="cab-art">🧠</span><b>脑洞派对</b><i>BRAIN PARTY</i><em>8 关</em>
+        </button>
+      </div>
+      <p class="coin-tip">INSERT COIN ↓ 点击机台开始游戏</p>
+    </section>
+
+    <!-- ═══ 答题画面 ═══ -->
+    <section class="scene" id="scenePlay" hidden>
+      <div class="hud">
+        <span id="hudGame">--</span>
+        <span class="hud-stage">STAGE <b id="hudNo">1</b>/8</span>
+        <span class="hud-score">SCORE <b id="hudScore">0</b></span>
+      </div>
+      <div class="hp-bar"><i id="hpFill"></i></div>
+      <p class="question" id="qText"></p>
+      <div class="opts" id="qOpts"></div>
+      <button class="btn-back" id="btnQuit">← 退出机台</button>
+    </section>
+
+    <!-- ═══ 结算画面 ═══ -->
+    <section class="scene" id="sceneResult" hidden>
+      <div class="res-head">— GAME RESULT —</div>
+      <div class="res-rank" id="resRank">S</div>
+      <div class="res-title" id="resTitle"></div>
+      <p class="res-desc" id="resDesc"></p>
+      <div class="res-bar-row"><span>本次得分</span><b id="resScore"></b></div>
+      <div class="res-bar-row"><span>历史最佳</span><b id="resBest"></b></div>
+      <div class="res-btns">
+        <button class="btn-pixel" id="btnAgain">再来一局</button>
+        <button class="btn-pixel ghost" id="btnHome">回到大厅</button>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
